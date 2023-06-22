@@ -1,0 +1,18 @@
+{% extends 'stamps/base.html' %}
+
+{% block content %}
+
+<h2>{{post.title}}</h2>
+
+{% if post.photos %}
+<p><img class="img-article-right" src="{{post.photos.url}}"></p>
+{% endif %}
+
+{{post.content|linebreaks}}
+<p class="price-text">Ціна: {{post.price}}</p>
+        {% if post.in_stock %}
+            <p class="link-buy-post"><a href="/basket">У кошик</a></p>
+        {% else %}
+            <p class="not-buy-post">Немає в наявності</p>
+        {% endif %}
+{% endblock %}

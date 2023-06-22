@@ -1,0 +1,7 @@
+{% extends 'stamps/base.html' %}
+{% block content %}
+<h2>{{ title }}</h2>
+<h4>Товар успішно додано в кошик!</h4>
+<button><a href="{% url 'home' %}">Продовжити покупки</a></button>
+<button><a href="/make_order">Оформити замовлення</a></button>
+{% endblock %}
